@@ -1,7 +1,8 @@
-export default function Home() {
-  return (
-    <div>
-      <h1>Welcome to My Homepage</h1>
-    </div>
-  );
-}
+import { NextPage } from "next";
+import { TopContainer } from "./_features/top/TopContainer";
+
+const Page: NextPage = () => {
+  return <TopContainer />;
+};
+
+export default Page;
