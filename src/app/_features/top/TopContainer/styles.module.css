@@ -93,6 +93,8 @@
   align-items: center;
   justify-content: center;
   gap: var(--gap-xl);
+  max-width: var(--max-content-width);
+  margin: 0 auto;
 }
 
 .menuTitle {
@@ -110,7 +112,6 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: var(--gap-xl);
-  max-width: 1200px;
   width: 100%;
   list-style: none;
   padding: 0;

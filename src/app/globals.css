@@ -54,6 +54,8 @@
   --z-index-xl: 10000;
 
   --padding: 16px;
+
+  --max-content-width: 1200px;
 }
 
 body {
