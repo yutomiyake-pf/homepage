@@ -25,7 +25,7 @@
   text-align: center;
   text-transform: uppercase;
   letter-spacing: 0.1em;
-  text-shadow: 0 4px 12px rgba(0, 0, 0, 0.3), 0 0 30px rgba(135, 206, 235, 0.6);
+  text-shadow: var(--text-shadow);
 }
 
 .menuGrid {
@@ -51,19 +51,18 @@
   cursor: pointer;
   text-decoration: none;
   color: inherit;
-  opacity: 0;
 }
 
 .menuItem:hover {
-  background: var(--background-linear-gradient-skyblue);
+  background: var(--color-primary-skyblue);
 }
 
 .menuItem:active {
-  background: var(--background-linear-gradient-skyblue);
+  background: var(--color-primary-skyblue-dark);
 }
 
 .menuLabel {
-  font-size: var(--font-size-lg);
+  font-size: var(--font-size-xl);
   font-weight: 700;
   color: var(--color-black);
   text-align: center;

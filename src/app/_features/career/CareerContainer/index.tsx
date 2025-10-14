@@ -5,40 +5,49 @@ import { Header } from "@/app/_components/Header";
 export const CareerContainer = (): ReactNode => {
   const careers = [
     {
-      period: "2020年 - 現在",
-      company: "テック株式会社",
-      position: "シニアエンジニア",
+      period: "2025年 - 現在",
+      company: "TRUNK株式会社",
+      position: "エンジニア",
       description:
-        "Next.js、TypeScriptを使用した大規模Webアプリケーションの開発をリード",
-      isSideJob: false,
-    },
-    {
-      period: "2022年 - 現在",
-      company: "スタートアップ支援",
-      position: "テクニカルアドバイザー",
-      description: "技術選定とアーキテクチャ設計のコンサルティング",
+        "オリジナル研修、資格取得サポートのe-Learningシステムのフロントエンド、バックエンド開発に参画",
       isSideJob: true,
     },
     {
-      period: "2017年 - 2020年",
-      company: "ソフトウェア開発株式会社",
+      period: "2024年 - 現在",
+      company: "株式会社スーパーハムスター",
+      position: "フロントエンドエンジニア",
+      description: "主にフロントエンド領域にてスポットで開発業務を担当",
+      isSideJob: true,
+    },
+    {
+      period: "2023年 - 現在",
+      company: "株式会社ニジボックス（リクルートグループ）",
       position: "フロントエンドエンジニア",
       description:
-        "React、Vueを使用したSPA開発、UIコンポーネントライブラリの構築",
+        "求人メディアの大規模リアーキテクチャプロジェクトにFEメンバーとして参画。オフショア開発にて海外メンバーのソース管理や仕様連携などを行いつつ、NextJSでのフロントエンドのコーディング業務を行う",
       isSideJob: false,
     },
     {
-      period: "2019年 - 2020年",
-      company: "フリーランス案件",
-      position: "Webデベロッパー",
-      description: "中小企業向けWebサイト制作とシステム開発",
+      period: "2023年 - 2024年",
+      company: "メンヘラテクノロジー株式会社",
+      position: "フロントエンドエンジニア",
+      description:
+        "生成AIを用いた占いwebアプリの開発などスポットでフロントエンド業務を行う",
       isSideJob: true,
     },
     {
-      period: "2014年 - 2017年",
-      company: "Web制作会社",
-      position: "Webデベロッパー",
-      description: "HTML、CSS、JavaScriptを使用したWebサイト制作",
+      period: "2022年 - 2023年",
+      company: "コアテック株式会社",
+      position: "フルスタックエンジニア",
+      description:
+        "NextJS, TypeScript, GraphQLを用いた新規サービスの立ち上げプロジェクトにフロントエンドエンジニアとして参画。PHP, Laravelを用いたバックエンド API開発にサブメンバーとして参画",
+      isSideJob: false,
+    },
+    {
+      period: "2021年 - 2022年",
+      company: "エンジャパン株式会社（プライム市場上場）",
+      position: "エンジニア",
+      description: "PHP, CakePHPを使った学生向けの求人サービスの開発に参画",
       isSideJob: false,
     },
   ];
