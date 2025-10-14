@@ -46,7 +46,7 @@ export const CareerContainer = (): ReactNode => {
     {
       period: "2021年 - 2022年",
       company: "エンジャパン株式会社（プライム市場上場）",
-      position: "エンジニア",
+      position: "バックエンドエンジニア",
       description: "PHP, CakePHPを使った学生向けの求人サービスの開発に参画",
       isSideJob: false,
     },
