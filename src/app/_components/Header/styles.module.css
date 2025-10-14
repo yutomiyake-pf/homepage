@@ -14,6 +14,9 @@
 
 .backButton:hover {
   background: var(--color-primary-skyblue);
+  transform: translateX(10px);
+  box-shadow: var(--shadow-md);
+  color: var(--color-white);
 }
 
 .sectionTitle {
