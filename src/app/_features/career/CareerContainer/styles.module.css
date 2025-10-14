@@ -1,0 +1,105 @@
+.section {
+  width: 100%;
+  min-height: 100dvh;
+  background: var(--background-linear-gradient-skyblue);
+  padding: var(--padding);
+}
+
+.sectionContent {
+  max-width: var(--max-content-width);
+  margin: 0 auto;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-xl);
+}
+
+.careerContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--gap-xl);
+}
+
+.careerItem {
+  position: relative;
+  width: 100%;
+  display: flex;
+  gap: var(--gap-xl);
+  background: var(--color-white);
+  padding: var(--padding);
+  border-radius: var(--border-radius-lg);
+  box-shadow: var(--shadow-md);
+}
+
+.careerItem:hover {
+  transform: translateX(10px);
+  box-shadow: var(--shadow-xl);
+}
+
+.careerPeriod {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--color-primary-skyblue);
+  width: 20%;
+}
+
+.careerDetails {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-sm);
+}
+
+.careerHeader {
+  display: flex;
+  align-items: center;
+  gap: var(--gap-sm);
+}
+
+.careerCompany {
+  font-size: var(--font-size-xl);
+  font-weight: 700;
+  color: var(--color-black);
+}
+
+.sideJobTag {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  padding: var(--spacing-xs);
+  background: var(--color-primary-skyblue);
+  color: var(--color-white);
+  font-size: var(--font-size-xs);
+  font-weight: 700;
+  border-radius: var(--border-radius-xl);
+  text-transform: uppercase;
+  z-index: var(--z-index-xs);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.careerPosition {
+  font-size: var(--font-size-lg);
+  color: var(--color-gray-600);
+}
+
+.careerDescription {
+  font-size: var(--font-size-md);
+  line-height: 1.6;
+  color: var(--color-gray-700);
+}
+
+@media (max-width: 768px) {
+  .careerItem {
+    flex-direction: column;
+    gap: var(--gap-md);
+  }
+
+  .careerPeriod {
+    width: 100%;
+  }
+}

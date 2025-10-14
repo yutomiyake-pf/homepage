@@ -12,6 +12,12 @@
   --color-gray-800: #1f2937;
   --color-black: #000000;
 
+  --text-shadow: 2px 2px 4px rgba(135, 206, 235, 0.3);
+
+  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+  --shadow-xl: 0 20px 25px rgba(0, 0, 0, 0.1);
+
   --background-linear-gradient-skyblue: linear-gradient(
     135deg,
     var(--color-primary-skyblue) 0%,
@@ -37,6 +43,9 @@
   --border-radius-sm: 8px;
   --border-radius-md: 12px;
   --border-radius-lg: 20px;
+  --border-radius-xl: 24px;
+  --border-radius-2xl: 32px;
+  --border-radius-3xl: 40px;
 
   --font-size-xs: 0.75rem;
   --font-size-sm: 0.875rem;

@@ -1,0 +1,27 @@
+.backButton {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--gap-xs);
+  padding: var(--padding);
+  background: var(--color-white);
+  color: var(--color-gray-800);
+  text-decoration: none;
+  border-radius: var(--border-radius-md);
+  font-weight: 600;
+  box-shadow: var(--shadow-md);
+  align-self: flex-start;
+}
+
+.backButton:hover {
+  background: var(--color-primary-skyblue);
+}
+
+.sectionTitle {
+  font-size: var(--font-size-4xl);
+  font-weight: 900;
+  color: var(--color-black);
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  text-shadow: var(--text-shadow);
+}
