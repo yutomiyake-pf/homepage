@@ -1,0 +1,128 @@
+.section {
+  width: 100%;
+  min-height: 100dvh;
+  background: var(--background-linear-gradient-skyblue);
+  padding: var(--padding);
+}
+
+.sectionContent {
+  max-width: var(--max-content-width);
+  margin: 0 auto;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-xl);
+}
+
+.skillsContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--gap-xl);
+}
+
+.skillsSection {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-lg);
+}
+
+.categoryTitle {
+  font-size: var(--font-size-2xl);
+  font-weight: 700;
+  color: var(--color-black);
+  padding-bottom: var(--spacing-sm);
+  border-bottom: 4px solid var(--color-primary-skyblue);
+}
+
+.skillsList {
+  background: var(--color-white);
+  padding: var(--padding);
+  border-radius: var(--border-radius-lg);
+  box-shadow: var(--shadow-md);
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--gap-sm);
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.skillItem {
+  background: linear-gradient(
+    135deg,
+    var(--color-primary-skyblue),
+    var(--color-primary-skyblue-dark)
+  );
+  color: var(--color-white);
+  padding: var(--spacing-sm) var(--spacing-md);
+  border-radius: var(--border-radius-lg);
+  font-size: var(--font-size-md);
+  font-weight: 600;
+  box-shadow: 0 2px 8px rgba(135, 206, 235, 0.3);
+  transition: transform 0.2s ease;
+}
+
+.skillItem:hover {
+  transform: translateY(-2px);
+}
+
+.certificationsSection {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-lg);
+}
+
+.certificationsList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-md);
+}
+
+.certificationItem {
+  background: var(--color-white);
+  padding: var(--padding);
+  border-radius: var(--border-radius-lg);
+  box-shadow: var(--shadow-md);
+  font-size: var(--font-size-lg);
+  color: var(--color-gray-800);
+  display: flex;
+  align-items: center;
+  gap: var(--gap-md);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.certificationItem:hover {
+  transform: translateX(10px);
+  box-shadow: var(--shadow-xl);
+}
+
+.certificationIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  background: linear-gradient(
+    135deg,
+    var(--color-primary-skyblue),
+    var(--color-primary-skyblue-dark)
+  );
+  color: var(--color-white);
+  border-radius: 50%;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+@media (max-width: 768px) {
+  .skillsList {
+    padding: var(--spacing-md);
+  }
+}
