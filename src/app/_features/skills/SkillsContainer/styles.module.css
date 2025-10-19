@@ -47,27 +47,6 @@
   flex-wrap: wrap;
   gap: var(--gap-sm);
   list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.skillItem {
-  background: linear-gradient(
-    135deg,
-    var(--color-primary-skyblue),
-    var(--color-primary-skyblue-dark)
-  );
-  color: var(--color-white);
-  padding: var(--spacing-sm) var(--spacing-md);
-  border-radius: var(--border-radius-lg);
-  font-size: var(--font-size-md);
-  font-weight: 600;
-  box-shadow: 0 2px 8px rgba(135, 206, 235, 0.3);
-  transition: transform 0.2s ease;
-}
-
-.skillItem:hover {
-  transform: translateY(-2px);
 }
 
 .certificationsSection {
@@ -79,50 +58,7 @@
 
 .certificationsList {
   list-style: none;
-  padding: 0;
-  margin: 0;
   display: flex;
   flex-direction: column;
   gap: var(--gap-md);
-}
-
-.certificationItem {
-  background: var(--color-white);
-  padding: var(--padding);
-  border-radius: var(--border-radius-lg);
-  box-shadow: var(--shadow-md);
-  font-size: var(--font-size-lg);
-  color: var(--color-gray-800);
-  display: flex;
-  align-items: center;
-  gap: var(--gap-md);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.certificationItem:hover {
-  transform: translateX(10px);
-  box-shadow: var(--shadow-xl);
-}
-
-.certificationIcon {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 30px;
-  height: 30px;
-  background: linear-gradient(
-    135deg,
-    var(--color-primary-skyblue),
-    var(--color-primary-skyblue-dark)
-  );
-  color: var(--color-white);
-  border-radius: 50%;
-  font-weight: 700;
-  flex-shrink: 0;
-}
-
-@media (max-width: 768px) {
-  .skillsList {
-    padding: var(--spacing-md);
-  }
 }
