@@ -1,7 +1,7 @@
 import { MetadataRoute } from "next";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://yutomiyake.github.io";
+  const baseUrl = "https://www.miyakun.com";
 
   return [
     {

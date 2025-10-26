@@ -3,6 +3,8 @@ import "ress";
 import "./globals.css";
 import { Footer } from "./_components/Footer";
 
+const baseUrl = "https://www.miyakun.com";
+
 export const metadata: Metadata = {
   title: {
     default: "みやくん",
@@ -22,7 +24,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "ja_JP",
-    // url: "https://yutomiyake.github.io",
+    url: baseUrl,
     title: "みやくん",
     description:
       "みやくんのホームページ。プロフィール、経歴、スキル、ブログなどを紹介しています。",
