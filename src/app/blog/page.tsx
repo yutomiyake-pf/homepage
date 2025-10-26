@@ -2,7 +2,12 @@ import { NextPage } from "next";
 import { BlogContainer } from "../_features/blog/BlogContainer";
 import { BlogArticle } from "../_features/blog/BlogContainer/type";
 import { superkerDeckBlogs } from "../_features/blog/BlogContainer/blogs";
+import type { Metadata } from "next";
 import dayjs from "dayjs";
+
+export const metadata: Metadata = {
+  title: "ブログ",
+};
 
 const Page: NextPage = async () => {
   const superkerDeckArticles: BlogArticle[] = superkerDeckBlogs;
