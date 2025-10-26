@@ -1,8 +1,6 @@
 .section {
   width: 100%;
   min-height: 100dvh;
-  background: var(--background-linear-gradient-skyblue);
-  padding: var(--padding);
 }
 
 .sectionContent {
