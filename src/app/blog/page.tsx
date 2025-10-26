@@ -11,7 +11,8 @@ const Page: NextPage = async () => {
   // 全ページを取得するループ
   while (hasMorePages) {
     const res = await fetch(
-      `https://zenn.dev/api/articles?username=reds&order=latest&page=${currentPage}`
+      `https://zenn.dev/api/articles?username=reds&order=latest&page=${currentPage}`,
+      { next: { revalidate: 86400 } } // 1日間キャッシュ
     );
     const data = await res.json();
 
