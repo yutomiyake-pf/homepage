@@ -25,7 +25,7 @@ export const BlogContainer = ({ articles }: Props): ReactNode => {
               <article className={styles.blogPost}>
                 <h2 className={styles.blogTitle}>{post.title}</h2>
                 <time className={styles.blogDate} dateTime={post.published_at}>
-                  {post.published_at}
+                  {post.display_published_at}
                 </time>
               </article>
             </Link>
