@@ -76,3 +76,10 @@
     margin: 0;
   }
 }
+
+@media (max-width: 768px) {
+  .menuGrid {
+    grid-template-columns: 1fr;
+    gap: var(--gap-md);
+  }
+}
