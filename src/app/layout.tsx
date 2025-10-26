@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "ress";
 import "./globals.css";
+import { Footer } from "./_components/Footer";
 
 export const metadata: Metadata = {
   title: "みやくん",
@@ -14,7 +15,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ja">
-      <body>{children}</body>
+      <body>
+        {children}
+        <Footer />
+      </body>
     </html>
   );
 }
