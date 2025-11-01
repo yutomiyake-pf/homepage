@@ -1,0 +1,19 @@
+.appleMusicWidget {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top: 1px solid var(--color-gray-200);
+  padding-top: var(--gap-lg);
+}
+
+@media (max-width: 768px) {
+  .appleMusicWidget {
+    padding-top: var(--gap-md);
+  }
+
+  .appleMusicWidget iframe {
+    height: 400px;
+  }
+}
+

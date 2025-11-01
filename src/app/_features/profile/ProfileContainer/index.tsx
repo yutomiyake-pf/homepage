@@ -5,6 +5,7 @@ import { FaGithub } from "react-icons/fa";
 import Image from "next/image";
 import Link from "next/link";
 import { Profile } from "./type";
+import { AppleMusicWidget } from "../AppleMusicWidget";
 
 type Props = {
   profile: Profile;
@@ -68,6 +69,8 @@ export const ProfileContainer = ({ profile }: Props): ReactNode => {
                 </dd>
               </div>
             </div>
+
+            <AppleMusicWidget profileId="yuto_uver1064" />
           </article>
         </section>
       </div>
