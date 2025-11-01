@@ -70,6 +70,14 @@
   color: var(--color-gray-600);
 }
 
+.links {
+  display: flex;
+  align-items: center;
+  gap: var(--gap-sm);
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
 .githubLink {
   display: flex;
   align-items: center;
@@ -80,11 +88,22 @@
   border-radius: var(--border-radius-md);
   font-size: var(--font-size-md);
   font-weight: 600;
-  margin-top: var(--gap-sm);
 }
 
-.githubIcon {
+.githubIcon, .appleMusicIcon {
   font-size: var(--font-size-xl);
+}
+
+.appleMusicLink {
+  display: flex;
+  align-items: center;
+  gap: var(--gap-sm);
+  padding: var(--spacing-sm) var(--spacing-md);
+  background: linear-gradient(135deg, #fa243c 0%, #ff6b9d 100%);
+  color: var(--color-white);
+  border-radius: var(--border-radius-md);
+  font-size: var(--font-size-md);
+  font-weight: 600;
 }
 
 .profileDetails {

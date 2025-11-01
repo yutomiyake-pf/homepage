@@ -3,10 +3,10 @@ import { ReactNode } from "react";
 import styles from "./styles.module.css";
 
 type Props = {
-  profileId: string;
+  playlistUrl: string;
 };
 
-export const AppleMusicWidget = ({ profileId }: Props): ReactNode => {
+export const AppleMusicWidget = ({ playlistUrl }: Props): ReactNode => {
   return (
     <div className={styles.appleMusicWidget}>
       <iframe
@@ -20,8 +20,8 @@ export const AppleMusicWidget = ({ profileId }: Props): ReactNode => {
           background: "transparent",
         }}
         sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation"
-        src={`https://embed.music.apple.com/profile/${profileId}`}
-        title="Apple Music Profile"
+        src={playlistUrl}
+        title="Apple Music Playlist"
       />
     </div>
   );

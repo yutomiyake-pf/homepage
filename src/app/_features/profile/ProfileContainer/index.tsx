@@ -2,6 +2,7 @@ import { ReactNode } from "react";
 import styles from "./styles.module.css";
 import { Header } from "@/app/_components/Header";
 import { FaGithub } from "react-icons/fa";
+import { SiApplemusic } from "react-icons/si";
 import Image from "next/image";
 import Link from "next/link";
 import { Profile } from "./type";
@@ -32,16 +33,28 @@ export const ProfileContainer = ({ profile }: Props): ReactNode => {
               <div className={styles.profileBasicInfo}>
                 <h2 className={styles.name}>{profile.name}</h2>
                 <p className={styles.nickname}>@{profile.nickname}</p>
-                <Link
-                  href={profile.githubUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className={styles.githubLink}
-                  aria-label="GitHubプロフィール"
-                >
-                  <FaGithub className={styles.githubIcon} />
-                  <span>GitHub</span>
-                </Link>
+                <div className={styles.links}>
+                  <Link
+                    href={profile.githubUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={styles.githubLink}
+                    aria-label="GitHubプロフィール"
+                  >
+                    <FaGithub className={styles.githubIcon} />
+                    <span>GitHub</span>
+                  </Link>
+                  <Link
+                    href="https://music.apple.com/profile/yuto_uver1064"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={styles.appleMusicLink}
+                    aria-label="Apple Musicプロフィール"
+                  >
+                    <SiApplemusic className={styles.appleMusicIcon} />
+                    <span>Apple Music</span>
+                  </Link>
+                </div>
               </div>
             </div>
 
@@ -70,7 +83,7 @@ export const ProfileContainer = ({ profile }: Props): ReactNode => {
               </div>
             </div>
 
-            <AppleMusicWidget profileId="yuto_uver1064" />
+            <AppleMusicWidget playlistUrl="https://embed.music.apple.com/jp/playlist/%E3%81%8A%E6%B0%97%E3%81%AB%E5%85%A5%E3%82%8A%E3%81%AE%E6%9B%B2/pl.u-ovUGaDyr8E" />
           </article>
         </section>
       </div>
