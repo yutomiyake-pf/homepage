@@ -6,7 +6,7 @@ import type { Metadata } from "next";
 import dayjs from "dayjs";
 
 export const metadata: Metadata = {
-  title: "ブログ",
+  title: "テックブログ一覧",
 };
 
 const Page: NextPage = async () => {

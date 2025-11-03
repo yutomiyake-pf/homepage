@@ -12,7 +12,7 @@ export const BlogContainer = ({ articles }: Props): ReactNode => {
   return (
     <main className={styles.section}>
       <div className={styles.sectionContent}>
-        <Header title="ブログ" />
+        <Header title="テックブログ一覧" />
         <section className={styles.blogContainer} aria-label="ブログ記事一覧">
           {articles.map((post, index) => (
             <Link
