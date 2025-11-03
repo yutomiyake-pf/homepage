@@ -13,6 +13,11 @@ export const BlogContainer = ({ articles }: Props): ReactNode => {
     <main className={styles.section}>
       <div className={styles.sectionContent}>
         <Header title="テックブログ一覧" />
+        <div className={styles.ctaRow}>
+          <Link href="/blog/hobby" className={styles.ctaLink}>
+            趣味ブログを見る
+          </Link>
+        </div>
         <section className={styles.blogContainer} aria-label="ブログ記事一覧">
           {articles.map((post, index) => (
             <Link

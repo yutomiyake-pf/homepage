@@ -13,7 +13,7 @@ export const HobbyListContainer = ({ articles }: Props): ReactNode => {
   return (
     <main className={styles.section}>
       <div className={styles.sectionContent}>
-        <Header title="ブログ一覧" />
+        <Header title="みやくんのブログ一覧" />
         <section className={styles.list} aria-label="趣味ブログ記事一覧">
           {articles.map((a, index) => (
             <Link

@@ -11,6 +11,27 @@
   gap: var(--gap-xl);
 }
 
+.ctaRow {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.ctaLink {
+  align-items: center;
+  padding: 10px 14px;
+  border-radius: var(--border-radius-md);
+  background: var(--color-white);
+  color: var(--color-black);
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.ctaLink:hover {
+  background: var(--color-primary-skyblue);
+  color: var(--color-white);
+}
+
 .blogContainer {
   width: 100%;
   display: flex;
