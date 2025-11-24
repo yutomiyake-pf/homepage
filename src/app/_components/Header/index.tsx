@@ -5,17 +5,19 @@ import styles from "./styles.module.css";
 
 type Props = {
   title: string;
+  backLabel?: string;
+  href?: string;
 };
 
-export const Header = ({ title }: Props): ReactNode => {
+export const Header = ({
+  title,
+  href = "/#menu",
+  backLabel = "← メニューに戻る",
+}: Props): ReactNode => {
   return (
     <>
-      <Link
-        href="/#menu"
-        className={styles.backButton}
-        aria-label="メニューに戻る"
-      >
-        ← メニューに戻る
+      <Link href={href} className={styles.backButton} aria-label={backLabel}>
+        {backLabel}
       </Link>
       <header>
         <h1 className={styles.sectionTitle}>{title}</h1>
