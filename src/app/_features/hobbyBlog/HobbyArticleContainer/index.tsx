@@ -18,8 +18,9 @@ export const HobbyArticleContainer = ({ article }: Props) => {
         <article className={styles.article}>
           <div className={styles.meta}>
             <time dateTime={article.date}>{article.date}</time>
-            {article.tags?.length !== 0 &&
-              article.tags?.map((tag) => `#${tag}`).join(" ")}
+            {article.tags?.map((tag) => (
+              <span key={tag}>#{tag}</span>
+            ))}
           </div>
           <div
             className={styles.content}
