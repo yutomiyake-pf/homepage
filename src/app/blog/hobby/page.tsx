@@ -2,6 +2,7 @@ import type { NextPage } from "next";
 import type { Metadata } from "next";
 import { getHobbyArticlesMeta } from "./_lib/md";
 import { HobbyListContainer } from "@/app/_features/hobbyBlog/HobbyListContainer";
+import { notFound } from "next/navigation";
 
 export const metadata: Metadata = {
   title: "趣味ブログ一覧",
@@ -10,7 +11,7 @@ export const metadata: Metadata = {
 const Page: NextPage = async () => {
   const articles = getHobbyArticlesMeta();
   if (articles.length === 0) {
-    throw new Error("記事がありません");
+    return notFound();
   }
   return <HobbyListContainer key={Date.now()} articles={articles} />;
 };
