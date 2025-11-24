@@ -9,6 +9,9 @@ export const metadata: Metadata = {
 
 const Page: NextPage = async () => {
   const articles = getHobbyArticlesMeta();
+  if (articles.length === 0) {
+    throw new Error("記事がありません");
+  }
   return <HobbyListContainer key={Date.now()} articles={articles} />;
 };
 
