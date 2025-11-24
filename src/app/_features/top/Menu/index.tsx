@@ -14,7 +14,6 @@ const menuItems: MenuItem[] = [
   { href: "/skills", label: "資格・スキル" },
   { href: "/portfolio", label: "ポートフォリオ" },
   { href: "/blog", label: "ブログ" },
-  { href: "/gallery", label: "ギャラリー" },
 ];
 
 export const Menu = (): ReactNode => {
