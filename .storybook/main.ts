@@ -18,6 +18,8 @@ const config: StorybookConfig = {
     config.resolve.alias = {
       ...config.resolve.alias,
       "@": path.resolve(__dirname, "../src"),
+      "next/link": path.resolve(__dirname, "./mocks/next-link.tsx"),
+      "next/image": path.resolve(__dirname, "./mocks/next-image.tsx"),
     };
     return config;
   },
