@@ -6,6 +6,7 @@ export const metadata: Metadata = {
   title: "ポートフォリオ",
 };
 
+// TODO ここにサイトのリストを出してクリックで遷移するようにする
 const Page: NextPage = () => {
   return <UnderConstruction pageName="ポートフォリオ" />;
 };
