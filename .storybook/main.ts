@@ -21,6 +21,10 @@ const config: StorybookConfig = {
       "next/link": path.resolve(__dirname, "./mocks/next-link.tsx"),
       "next/image": path.resolve(__dirname, "./mocks/next-image.tsx"),
     };
+    config.esbuild = {
+      ...config.esbuild,
+      jsx: "automatic",
+    };
     return config;
   },
 };

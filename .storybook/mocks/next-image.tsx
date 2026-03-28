@@ -1,4 +1,4 @@
-import React from "react";
+import type { CSSProperties } from "react";
 
 type ImageProps = {
   src: string;
@@ -10,7 +10,7 @@ type ImageProps = {
 };
 
 const Image = ({ src, alt, width, height, fill, ...props }: ImageProps) => {
-  const style: React.CSSProperties = fill
+  const style: CSSProperties = fill
     ? { objectFit: "cover", width: "100%", height: "100%" }
     : {};
 
