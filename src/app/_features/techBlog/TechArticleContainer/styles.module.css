@@ -33,15 +33,15 @@
   line-height: 1.8;
 }
 
-/* globals.css の a { color: inherit } を上書きし、本文内リンクを判別可能にする */
+/* globals.css の a { color: inherit } を上書き。グラデ背景でも読めるよう濃い青にする */
 .content :global(a) {
-  color: var(--color-primary-skyblue-dark);
+  color: #1e40af;
   text-decoration: underline;
   text-underline-offset: 0.15em;
 }
 
 .content :global(a:hover) {
-  color: var(--color-gray-800);
+  color: #172554;
 }
 
 .content :global(img) {
