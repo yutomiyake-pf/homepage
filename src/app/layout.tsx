@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import Script from "next/script";
 import "ress";
 import "./globals.css";
@@ -6,7 +6,13 @@ import { Footer } from "./_components/Footer";
 
 const baseUrl = "https://www.miyakun.com";
 
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+};
+
 export const metadata: Metadata = {
+  metadataBase: new URL(baseUrl),
   title: {
     default: "みやくん",
     template: "%s | みやくん",
@@ -22,6 +28,9 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: "みやくん", url: "https://github.com/yutomiyake-pf" }],
   creator: "みやくん",
+  alternates: {
+    canonical: "/",
+  },
   openGraph: {
     type: "website",
     locale: "ja_JP",
@@ -31,15 +40,23 @@ export const metadata: Metadata = {
       "みやくんのホームページ。プロフィール、経歴、スキル、ブログなどを紹介しています。",
     siteName: "みやくん",
   },
+  twitter: {
+    card: "summary",
+    title: "みやくん",
+    description:
+      "みやくんのホームページ。プロフィール、経歴、スキル、ブログなどを紹介しています。",
+  },
   robots: {
     index: true,
     follow: true,
     googleBot: {
       index: true,
       follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
     },
   },
-  viewport: "width=device-width, initial-scale=1",
 };
 
 export default function RootLayout({
@@ -62,6 +79,24 @@ export default function RootLayout({
             gtag('config', 'G-D98Z2PTBPX');
           `}
         </Script>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "WebSite",
+              name: "みやくん",
+              url: baseUrl,
+              description:
+                "みやくんのホームページ。プロフィール、経歴、スキル、ブログなどを紹介しています。",
+              author: {
+                "@type": "Person",
+                name: "みやくん",
+                url: "https://github.com/yutomiyake-pf",
+              },
+            }),
+          }}
+        />
         {children}
         <Footer />
       </body>
