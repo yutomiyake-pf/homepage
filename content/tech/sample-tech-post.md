@@ -1,6 +1,5 @@
 ---
 title: "Next.js App Routerでのブログ構築"
-slug: "sample-tech-post"
 date: "2026-03-28"
 tags: ["Next.js", "React", "App Router"]
 summary: "Next.js App Routerを使ったブログの構築方法について紹介します。"

@@ -29,7 +29,7 @@ export const getTechArticlesMeta = (): TechArticleMeta[] => {
     const { data } = matter(raw);
     const meta: TechArticleMeta = {
       title: data.title ?? "",
-      slug: data.slug ?? file.replace(/\.md$/, ""),
+      slug: file.replace(/\.md$/, ""),
       date: data.date ?? "",
       tags: data.tags ?? [],
       summary: data.summary ?? "",
@@ -65,7 +65,7 @@ export const getTechArticleBySlug = async (
   const html = await markdownToHtml(content);
   const meta: TechArticle = {
     title: data.title ?? slug,
-    slug: data.slug ?? slug,
+    slug: slug,
     date: data.date ?? "",
     tags: data.tags ?? [],
     summary: data.summary ?? "",
