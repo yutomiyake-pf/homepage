@@ -5,6 +5,15 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "プロフィール",
+  description: "みやくんのプロフィール。自己紹介や趣味などを紹介しています。",
+  alternates: {
+    canonical: "/profile",
+  },
+  openGraph: {
+    title: "プロフィール | みやくん",
+    description: "みやくんのプロフィール。自己紹介や趣味などを紹介しています。",
+    url: "/profile",
+  },
 };
 
 const Page: NextPage = () => {

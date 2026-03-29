@@ -1,9 +1,11 @@
 import { MetadataRoute } from "next";
+import { getAllHobbySlugs } from "./blog/hobby/_lib/md";
+import { getAllTechSlugs } from "./blog/tech/_lib/md";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = "https://www.miyakun.com";
 
-  return [
+  const staticPages: MetadataRoute.Sitemap = [
     {
       url: baseUrl,
       lastModified: new Date(),
@@ -23,6 +25,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.9,
     },
     {
+      url: `${baseUrl}/blog/hobby`,
+      lastModified: new Date(),
+      changeFrequency: "weekly",
+      priority: 0.8,
+    },
+    {
       url: `${baseUrl}/career`,
       lastModified: new Date(),
       changeFrequency: "monthly",
@@ -34,5 +42,35 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "monthly",
       priority: 0.7,
     },
+    {
+      url: `${baseUrl}/portfolio`,
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.5,
+    },
+    {
+      url: `${baseUrl}/gallery`,
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.5,
+    },
   ];
+
+  const hobbySlugs = getAllHobbySlugs();
+  const hobbyPages: MetadataRoute.Sitemap = hobbySlugs.map((slug) => ({
+    url: `${baseUrl}/blog/hobby/${slug}`,
+    lastModified: new Date(),
+    changeFrequency: "monthly",
+    priority: 0.6,
+  }));
+
+  const techSlugs = getAllTechSlugs();
+  const techPages: MetadataRoute.Sitemap = techSlugs.map((slug) => ({
+    url: `${baseUrl}/blog/tech/${slug}`,
+    lastModified: new Date(),
+    changeFrequency: "monthly",
+    priority: 0.6,
+  }));
+
+  return [...staticPages, ...hobbyPages, ...techPages];
 }

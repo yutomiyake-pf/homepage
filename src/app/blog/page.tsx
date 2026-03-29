@@ -9,6 +9,17 @@ import { v4 as uuidv4 } from "uuid";
 
 export const metadata: Metadata = {
   title: "テックブログ一覧",
+  description:
+    "みやくんのテックブログ一覧。技術記事やプログラミングに関する情報を発信しています。",
+  alternates: {
+    canonical: "/blog",
+  },
+  openGraph: {
+    title: "テックブログ一覧 | みやくん",
+    description:
+      "みやくんのテックブログ一覧。技術記事やプログラミングに関する情報を発信しています。",
+    url: "/blog",
+  },
 };
 
 const Page: NextPage = async () => {
