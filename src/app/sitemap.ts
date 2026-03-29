@@ -1,6 +1,6 @@
 import { MetadataRoute } from "next";
-import { getAllHobbySlugs } from "./blog/hobby/_lib/md";
-import { getAllTechSlugs } from "./blog/tech/_lib/md";
+import { getHobbyArticlesMeta } from "./blog/hobby/_lib/md";
+import { getTechArticlesMeta } from "./blog/tech/_lib/md";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = "https://www.miyakun.com";
@@ -56,17 +56,17 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
   ];
 
-  const hobbySlugs = getAllHobbySlugs();
-  const hobbyPages: MetadataRoute.Sitemap = hobbySlugs.map((slug) => ({
-    url: `${baseUrl}/blog/hobby/${slug}`,
+  const hobbyMeta = getHobbyArticlesMeta();
+  const hobbyPages: MetadataRoute.Sitemap = hobbyMeta.map((m) => ({
+    url: `${baseUrl}/blog/hobby/${m.slug}`,
     lastModified: new Date(),
     changeFrequency: "monthly",
     priority: 0.6,
   }));
 
-  const techSlugs = getAllTechSlugs();
-  const techPages: MetadataRoute.Sitemap = techSlugs.map((slug) => ({
-    url: `${baseUrl}/blog/tech/${slug}`,
+  const techMeta = getTechArticlesMeta();
+  const techPages: MetadataRoute.Sitemap = techMeta.map((m) => ({
+    url: `${baseUrl}/blog/tech/${m.slug}`,
     lastModified: new Date(),
     changeFrequency: "monthly",
     priority: 0.6,

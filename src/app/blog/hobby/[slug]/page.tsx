@@ -30,12 +30,12 @@ export const generateMetadata = async ({
     title: article.title,
     description: article.summary,
     alternates: {
-      canonical: `/blog/hobby/${article.slug}`,
+      canonical: `/blog/hobby/${params.slug}`,
     },
     openGraph: {
       title: `${article.title} | みやくん`,
       description: article.summary,
-      url: `/blog/hobby/${article.slug}`,
+      url: `/blog/hobby/${params.slug}`,
       type: "article",
       publishedTime: article.date,
       authors: ["みやくん"],
@@ -66,7 +66,7 @@ const Page = async ({ params }: PageProps) => {
       name: "みやくん",
       url: "https://github.com/yutomiyake-pf",
     },
-    url: `https://www.miyakun.com/blog/hobby/${article.slug}`,
+    url: `https://www.miyakun.com/blog/hobby/${params.slug}`,
     keywords: (article.tags ?? []).join(", "),
   };
 
