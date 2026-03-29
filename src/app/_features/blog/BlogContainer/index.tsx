@@ -23,8 +23,9 @@ export const BlogContainer = ({ articles }: Props): ReactNode => {
             <Link
               key={index}
               href={post.url}
-              target="_blank"
-              rel="noopener noreferrer"
+              {...(post.isInternal
+                ? {}
+                : { target: "_blank", rel: "noopener noreferrer" })}
               className={styles.blogPostLink}
             >
               <article className={styles.blogPost}>

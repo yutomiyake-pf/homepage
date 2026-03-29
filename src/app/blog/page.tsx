@@ -2,8 +2,10 @@ import { NextPage } from "next";
 import { BlogContainer } from "../_features/blog/BlogContainer";
 import { BlogArticle } from "../_features/blog/BlogContainer/type";
 import { superkerDeckBlogs } from "../_features/blog/BlogContainer/blogs";
+import { getTechArticlesMeta } from "./tech/_lib/md";
 import type { Metadata } from "next";
 import dayjs from "dayjs";
+import { v4 as uuidv4 } from "uuid";
 
 export const metadata: Metadata = {
   title: "テックブログ一覧",
@@ -49,7 +51,22 @@ const Page: NextPage = async () => {
     }
   }
 
-  const articles: BlogArticle[] = [...superkerDeckArticles, ...zennArticles];
+  // 内部テックブログ記事を取得
+  const techArticlesMeta = getTechArticlesMeta();
+  const internalTechArticles: BlogArticle[] = techArticlesMeta.map((meta) => ({
+    id: uuidv4(),
+    title: meta.title,
+    published_at: dayjs(new Date(meta.date)).format("YYYY-MM-DD HH:mm"),
+    display_published_at: dayjs(new Date(meta.date)).format("YYYY-MM-DD"),
+    url: `/blog/tech/${meta.slug}`,
+    isInternal: true,
+  }));
+
+  const articles: BlogArticle[] = [
+    ...superkerDeckArticles,
+    ...zennArticles,
+    ...internalTechArticles,
+  ];
 
   // published_atの降順で並び替え（新しい順）
   const sortedArticles = articles.sort(

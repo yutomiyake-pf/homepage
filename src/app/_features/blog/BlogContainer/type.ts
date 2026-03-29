@@ -4,4 +4,5 @@ export type BlogArticle = {
   published_at: string;
   display_published_at: string;
   url: string;
+  isInternal?: boolean;
 };
