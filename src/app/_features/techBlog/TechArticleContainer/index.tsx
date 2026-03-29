@@ -12,7 +12,7 @@ export const TechArticleContainer = ({ article }: Props) => {
       <div className={styles.sectionContent}>
         <Header
           title={article.title}
-          href="/blog/tech"
+          href="/blog"
           backLabel="← テックブログ一覧へ戻る"
         />
         <article className={styles.article}>
